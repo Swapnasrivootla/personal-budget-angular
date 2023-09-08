@@ -2,29 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- This is an SEO Change -->
+    <meta name="description" content="Manage your personal budget with our free budgeting app. Track expenses and stay on top of your finances.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Budget</title>
+    <!-- This is an SEO Change -->
+    <title>Homepage - Personal Budget</title> 
     <link rel="stylesheet" href="/reset.css">
     <link rel="stylesheet" href="/main.css">
+   <!-- This is an SEO Change --> 
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Personal Budget",
+          "description": "A personal budget management app",
+          "operatingSystem": "Any",
+          "applicationCategory": "FinanceApplication"
+        }
+        </script>
+        
 </head>
 <body>
-
+    <!-- This is a Semantic HTML Change -->
+<header>
     <div class="menu">
         <ul>
-            <li><a href="/">Homepage</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/login.html">Login</a></li>
+            <!-- This is an A11y Change -->
+            <li><a href="/" aria-label="Go to Home Page">Home</a></li>
+            <li><a href="/about.html" aria-label="Learn about Personal Budget">About</a></li>
+            <li><a href="/login.html" aria-label="Login to Personal Budget">Login</a></li>
             <li><a href="https://google.com">Google</a></li>
+            
         </ul>
     </div>
-
+     <!-- This is a Semantic HTML Change -->
+    <main>
+      
+    
     <div class="hero">
         <h1>Personal Budget</h1>
         <h2>A personal-budget management app</h2>
     </div>
-
+</main>
+    
+</header>
     <div class="container center">
-
+        <!-- This is a Semantic HTML Change -->
+<section>
         <div class="page-area">
 
             <div class="text-box">
@@ -92,7 +116,7 @@
             </div>
 
         </div>
-
+    </section>
     </div>
 
     <div class="bottom">
