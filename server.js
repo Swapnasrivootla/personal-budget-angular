@@ -1,33 +1,30 @@
 const express = require('express');
+const fs = require('fs'); // Import the file system module
 const app = express();
 const port = 3000;
 
-app.use('/',express.static('public'));
+app.use('/', express.static('public'));
 
-const budget = {
-    myBudget: [
-        {
-            title: 'Eat out',
-            budget: 25
-        },
-        {
-            title: 'Rent',
-            budget: 375
-        },
-        {
-            title: 'Grocery',
-            budget: 110
-        },
-    ]
-};
+// Define the path to your JSON file
+const budgetFilePath = 'budget.json';
 
 
-app.get('/hello',(req,res)=> {
-    res.send('Hello World!');
+
+app.get('/budget', (req, res) => {
+  // Read the JSON file and send its contents as the response
+  fs.readFile(budgetFilePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error('Error reading JSON file:', err);
+      res.status(500).json({ error: 'Internal Server Error' });
+      return;
+    }
+
+    // Parse the JSON data and send it as the response
+    const budgetData = JSON.parse(data);
+    res.json(budgetData);
+  });
 });
-app.get('/budget',(req,res)=> {
-    res.json(budget);
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
 });
-app.listen(port , () => {
-    console.log('Example app listening at http://localhost:${port}')
- });
