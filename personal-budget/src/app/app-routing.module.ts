@@ -1,12 +1,10 @@
 
 import { NgModule,Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { P404Component } from './p404/p404.component';
-import { ArticleComponent } from './article/article.component';
 import { ContactComponent } from './contact/contact.component';
 const routes: Routes =[
   {

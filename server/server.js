@@ -3,7 +3,7 @@ const cors=require('cors');
 // const fs = require('fs'); // Import the file system module
 const app = express();
 const port = 3000;
-const data = require("./budget.json");
+const data = require("./data.json");
 
 app.use(cors());
 const budget = { 

@@ -16,13 +16,14 @@ export class HomepageComponent implements AfterViewInit {
       {
         data: [],
         backgroundColor: [
-          '#ffcd56',
-          '#ff6384',
-          '#36a2eb',
-          '#fd6b19',
-          '#83FF33',
-          '#F633FF',
-          '#FF3333',
+
+        "#abcdef",
+        "#acdebf",
+        "#aefcda",
+        "#a98765",
+        "#326875",
+        "#896754",
+        "#123450"
         ],
       }
     ],
@@ -52,13 +53,14 @@ export class HomepageComponent implements AfterViewInit {
   public createColors(): void {
     this.colors = d3.scaleOrdinal()
       .domain(this.dataService.getDataSource1().map((d: any) => d.value))
-      .range(["#ffcd56",
-        "#ff6384",
-        "#36a2eb",
-        "#fd6b19",
-        "#83FF33",
-        "#F633FF",
-        "#FF3333"]);
+      .range([
+        "#abcdef",
+        "#acdebf",
+        "#aefcda",
+        "#a98765",
+        "#326875",
+        "#896754",
+        "#123450"]);
   }
 
   private drawChart(): void {
