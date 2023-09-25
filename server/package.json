@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/Swapnasrivootla/personal-budget#readme",
   "dependencies": {
+    "@types/d3": "^7.4.1",
     "cors": "^2.8.5",
+    "d3": "^7.8.5",
     "express": "^4.18.2"
   }
 }
